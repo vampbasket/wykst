@@ -1,0 +1,90 @@
+:root {
+
+    /* Fonts */
+    --display-font: 'QumpellkaNo12', sans-serif;
+    --header-font: 'Shadower', serif;
+    --body-font: 'Alice', sans-serif;
+    --mono-font: 'Fantasque Sans Mono', 'DM Mono', monospace;
+
+    /* Palette */
+    --color-bg: #071112;
+    --color-surface: #122122;
+    --color-surface-2: #1b2c2e;
+    --color-surface-3: #253839;
+    --color-surface-4: #324644;
+    --color-border: #776e59;
+    --color-text-heading: #f7e9ce;
+    --color-text: #e7dfcc;
+    --color-text-secondary: #d0d4c5;
+    --color-text-muted: #b4c4ba;
+    --color-text-faint: #a9b9b0;
+    --color-accent: #e6ba7c;
+    --color-accent-foreground: #0c181a;
+    --color-primary: #deb274;
+
+}
+
+@font-face {
+    font-family: QumpellkaNo12;
+    src: url(/assets/fonts/QumpellkaNo12.otf);
+}
+
+@font-face {
+    font-family: Shadower;
+    src: url(/assets/fonts/Shadower.ttf);
+}
+
+/* Headers */
+h1 {
+    font-family: var(--display-font);
+    font-size: 3em;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--header-font);
+}
+
+/* Cards */
+
+.card {
+    background:
+        radial-gradient(120% 80% at 50% 0%, var(--color-surface), transparent 62%),
+        repeating-linear-gradient(95deg, rgba(0, 0, 0, .04) 0 2px, transparent 2px 5px),
+        var(--color-surface-2);
+    border-radius: 0;
+}
+
+.card:hover {
+    transition: all 0.25s ease-in-out;
+    translate: -.15em -.15em;
+    box-shadow: .15em .15em .15em alpha(from var(--color-accent) / 25%);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 0;
+    background-image: url('/assets/img/textured-paper.png');
+    background-color: var(--color-accent);
+    background-size: 2.5em;
+}
+
+.btn:hover {
+    transition: all 0.25s ease-in-out;
+    box-shadow: .15em .15em .15em alpha(from var(--color-accent) / 25%); 
+    background-color: var(--color-accent);
+    transform: rotate(0.005turn);
+}
+
+/* Lists */
+ul {
+    list-style: outside '\2727';
+    padding-left: 1em;
+}
+
+li {
+    padding-left: 10px;
+}
